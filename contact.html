@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact – T&H Digital & Stationery Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo"><span class="logo-icon">✦</span><span class="logo-text">T&H <em>Digital & Stationery Hub</em></span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <a href="#request" class="btn btn-nav">Request a Service</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <span class="section-tag">Get In Touch</span>
+  <h1>Contact <em>Us</em></h1>
+  <p>We're ready to help. Visit us in Namalu or reach out through any of the channels below.</p>
+</div>
+
+<div class="container">
+  <div class="contact-grid">
+    <!-- Contact Info -->
+    <div class="contact-info-card">
+      <h3>📍 Find Us</h3>
+      <div class="cinfo-item">
+        <div class="cinfo-icon">📍</div>
+        <div><h4>Location</h4><p>Namalu Town Council<br>Nakapiripirit District, Uganda</p></div>
+      </div>
+      <div class="cinfo-item">
+        <div class="cinfo-icon">📞</div>
+        <div><h4>Phone / WhatsApp</h4><a href="tel:0761264781"><p>0761 264 781</p></a></div>
+      </div>
+      <div class="cinfo-item">
+        <div class="cinfo-icon">✉️</div>
+        <div><h4>Email</h4><a href="mailto:loputherbert@gmail.com"><p>loputherbert@gmail.com</p></a></div>
+      </div>
+      <div class="hours-table">
+        <h4>Business Hours</h4>
+        <div class="hour-row"><span>Monday – Friday</span><span>8:00 AM – 6:00 PM</span></div>
+        <div class="hour-row"><span>Saturday</span><span>9:00 AM – 5:00 PM</span></div>
+        <div class="hour-row"><span>Sunday</span><span>10:00 AM – 3:00 PM</span></div>
+      </div>
+      <a href="https://wa.me/256761264781" target="_blank" class="btn btn-whatsapp" style="margin-top:24px;width:100%;justify-content:center;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chat on WhatsApp
+      </a>
+    </div>
+
+    <!-- Form -->
+    <div id="request" class="contact-form-card">
+      <div class="form-card">
+        <h3>Request a Service</h3>
+        <p class="form-sub">Fill in the form below and we'll respond as soon as possible — or call us directly.</p>
+
+        <div class="security-note">
+          🔒 Your information is handled securely and never shared with third parties.
+        </div>
+
+        <div class="form-success" id="formSuccess">
+          ✅ <strong>Request sent!</strong> Thank you. We'll get back to you shortly. You can also WhatsApp us at <a href="https://wa.me/256761264781">0761 264 781</a>.
+        </div>
+
+        <form id="serviceForm" novalidate autocomplete="on">
+          <!-- Honeypot anti-spam field -->
+          <div class="hp-field" aria-hidden="true">
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off">
+          </div>
+
+          <!-- CSRF token (simulated client-side) -->
+          <input type="hidden" name="_csrf" id="csrfToken">
+          <input type="hidden" name="_timestamp" id="formTimestamp">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full Name *</label>
+              <input type="text" id="fullName" name="fullName" placeholder="Your full name" autocomplete="name" maxlength="100">
+              <span class="field-error">Please enter your full name.</span>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="e.g. 0790702669" autocomplete="tel" maxlength="20">
+              <span class="field-error">Please enter a valid phone number.</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address (Optional)</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" maxlength="200">
+            <span class="field-error">Please enter a valid email address.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="service">Service Required *</label>
+            <select id="service" name="service">
+              <option value="">— Select a service —</option>
+              <option value="school-supplies">School Supplies</option>
+              <option value="office-supplies">Office Supplies</option>
+              <option value="printing">Printing Services</option>
+              <option value="photocopying">Photocopying</option>
+              <option value="laminating">Laminating</option>
+              <option value="graphic-design">Graphic Design</option>
+              <option value="tin-registration">TIN Registration</option>
+              <option value="school-application">School Application Assistance</option>
+              <option value="document-typing">Document Typing</option>
+              <option value="other">Other</option>
+            </select>
+            <span class="field-error">Please select a service.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Details / Message *</label>
+            <textarea id="message" name="message" placeholder="Describe what you need in as much detail as possible..." maxlength="2000"></textarea>
+            <span class="field-error">Please describe what you need.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="howContact">How should we contact you? *</label>
+            <select id="howContact" name="howContact">
+              <option value="">— Select preferred contact —</option>
+              <option value="phone-call">Phone Call</option>
+              <option value="whatsapp">WhatsApp</option>
+              <option value="email">Email</option>
+              <option value="in-person">I'll visit in person</option>
+            </select>
+            <span class="field-error">Please select a contact preference.</span>
+          </div>
+
+          <div id="submitError" style="display:none;background:#fee2e2;border:1px solid #fca5a5;color:#991b1b;padding:12px 16px;border-radius:10px;font-size:0.85rem;margin-bottom:16px;"></div>
+
+          <button type="submit" class="btn btn-primary form-submit" id="submitBtn">
+            <span id="submitText">Send Request</span>
+            <span id="submitSpinner" style="display:none">⏳ Sending…</span>
+          </button>
+
+          <p style="color:var(--gray);font-size:0.8rem;margin-top:12px;text-align:center;">
+            Or call / WhatsApp us directly at <a href="tel:0761264781" style="color:var(--blue);font-weight:600;">0761 264 781</a>
+          </p>
+        </form>
+      </div>
+
+      <!-- General Enquiry -->
+      <div class="form-card" style="margin-top:28px;">
+        <h3>General Enquiry</h3>
+        <p class="form-sub">Have a question that doesn't fit the form above? Send us a quick message.</p>
+        <div class="form-success" id="enquirySuccess">
+          ✅ <strong>Message sent!</strong> We'll get back to you soon.
+        </div>
+        <form id="enquiryForm" novalidate>
+          <input type="hidden" name="_honey2" class="hp-field">
+          <div class="form-group">
+            <label for="eName">Your Name *</label>
+            <input type="text" id="eName" name="name" placeholder="Your name" maxlength="100">
+            <span class="field-error">Please enter your name.</span>
+          </div>
+          <div class="form-group">
+            <label for="eContact">Phone or Email *</label>
+            <input type="text" id="eContact" name="contact" placeholder="Phone or email" maxlength="200">
+            <span class="field-error">Please enter your phone or email.</span>
+          </div>
+          <div class="form-group">
+            <label for="eMessage">Message *</label>
+            <textarea id="eMessage" name="message" placeholder="Your question or message…" maxlength="1000" style="min-height:90px;"></textarea>
+            <span class="field-error">Please enter your message.</span>
+          </div>
+          <button type="submit" class="btn btn-outline form-submit" id="enquiryBtn" style="background:var(--blue);color:white;width:100%;">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Map Section -->
+<div class="container map-section">
+  <h3>📍 Our Location</h3>
+  <div class="map-container">
+    <div class="map-placeholder">🗺️</div>
+    <p style="max-width:400px;color:var(--gray);font-size:0.95rem;">
+      <strong style="color:var(--blue);">T&H Digital & Stationery Hub</strong><br>
+      Namalu Town Council, Nakapiripirit District, Uganda<br><br>
+      <a href="https://maps.google.com/?q=Namalu,Nakapiripirit,Uganda" target="_blank" class="btn btn-primary" style="margin-top:8px;">Open in Google Maps</a>
+    </p>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="logo"><span class="logo-icon">✦</span><span class="logo-text">T&H <em>Digital & Stationery Hub</em></span></a><p>Serving Namalu and Nakapiripirit District.</p><a href="https://wa.me/256761264781" class="btn btn-whatsapp sm" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>0761 264 781</a></div>
+      <div class="footer-links"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="products.html">Products</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-links"><h4>Services</h4><ul><li><a href="services.html#school">School Supplies</a></li><li><a href="services.html#printing">Printing</a></li><li><a href="services.html#design">Graphic Design</a></li><li><a href="services.html#internet">Internet Services</a></li></ul></div>
+      <div class="footer-contact"><h4>Contact Us</h4><p>📍 Namalu T/C, Nakapiripirit District</p><p>📞 <a href="tel:0761264781">0761 264 781</a></p><p>✉️ <a href="mailto:loputherbert@gmail.com">loputherbert@gmail.com</a></p><div class="footer-hours"><p><strong>Business Hours</strong></p><p>Mon–Fri: 8am – 6pm</p><p>Sat: 9am – 5pm | Sun: 10am – 3pm</p></div></div>
+    </div>
+    <div class="footer-bottom"><p>© <span id="year"></span> T&H Digital & Stationery Hub. All rights reserved. | Namalu, Nakapiripirit District, Uganda</p></div>
+  </div>
+</footer>
+
+<a href="https://wa.me/256761264781" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="main.js"></script>
+</body>
+</html>

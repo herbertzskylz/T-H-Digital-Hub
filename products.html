@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products – T&H Digital & Stationery Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo"><span class="logo-icon">✦</span><span class="logo-text">T&H <em>Digital & Stationery Hub</em></span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="products.html" class="active">Products</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html#request" class="btn btn-nav">Request a Service</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <span class="section-tag">In Stock</span>
+  <h1>Our <em>Products</em></h1>
+  <p>Quality stationery and supplies for students, teachers, and businesses — all available in-store.</p>
+</div>
+
+<div class="container">
+  <!-- Filter tabs -->
+  <div style="padding:32px 0 0;display:flex;gap:10px;flex-wrap:wrap;" id="filterTabs">
+    <button class="filter-btn active" data-cat="all">All Products</button>
+    <button class="filter-btn" data-cat="school">School</button>
+    <button class="filter-btn" data-cat="office">Office</button>
+    <button class="filter-btn" data-cat="printing">Printing</button>
+    <button class="filter-btn" data-cat="design">Design</button>
+  </div>
+
+  <div class="products-grid" id="productsGrid">
+    <!-- School -->
+    <div class="product-card" data-cat="school">
+      <div class="product-img">📝</div>
+      <div class="product-info">
+        <h3>Exercise Books</h3>
+        <p>A4 & A5 exercise books, lined and squared. Available in packs.</p>
+        <span class="product-badge">School</span>
+      </div>
+    </div>
+    <div class="product-card" data-cat="school">
+      <div class="product-img">✏️</div>
+      <div class="product-info">
+        <h3>Pens & Pencils</h3>
+        <p>Ballpoint pens, HB pencils, coloured pencils. Single or box.</p>
+        <span class="product-badge">School</span>
+      </div>
+    </div>
+    <div class="product-card" data-cat="school">
+      <div class="product-img">📐</div>
+      <div class="product-info">
+        <h3>Geometry Sets</h3>
+        <p>Complete geometry sets with compass, protractor, set squares & ruler.</p>
+        <span class="product-badge">School</span>
+      </div>
+    </div>
+    <div class="product-card" data-cat="school">
+      <div class="product-img">📏</div>
+      <div class="product-info">
+        <h3>Rulers & Erasers</h3>
+        <p>30cm plastic rulers and quality erasers for students.</p>
+        <span class="product-badge">School</span>
+      </div>
+    </div>
+    <div class="product-card" data-cat="school">
+      <div class="product-img">🗃️</div>
+      <div class="product-info">
+        <h3>Files & Folders</h3>
+        <p>Cardboard and plastic files, binders, presentation folders.</p>
+        <span class="product-badge">School</span>
+      </div>
+    </div>
+    <div class="product-card" data-cat="school">
+      <div class="product-img">🧮</div>
+      <div class="product-info">
+        <h3>Scientific Calculators</h3>
+        <p>CASIO and other scientific calculators for O & A Level students.</p>
+        <span class="product-badge">School</span>
+      </div>
+    </div>
+    <!-- Office -->
+    <div class="product-card" data-cat="office">
+      <div class="product-img">🗂️</div>
+      <div class="product-info">
+        <h3>A4 Printing Paper</h3>
+        <p>80gsm white A4 paper. Available per ream (500 sheets) or box.</p>
+        <span class="product-badge">Office</span>
+      </div>
+    </div>
+    <div class="product-card" data-cat="office">
+      <div class="product-img">📎</div>
+      <div class="product-info">
+        <h3>Staplers & Staples</h3>
+        <p>Standard and heavy-duty staplers with staple refills.</p>
+        <span class="product-badge">Office</span>
+      </div>
+    </div>
+    <div class="product-card" data-cat="office">
+      <div class="product-img">✂️</div>
+      <div class="product-info">
+        <h3>Scissors & Tape</h3>
+        <p>Office scissors, clear tape, masking tape, Grafting knife.</p>
+        <span class="product-badge">Office</span>
+      </div>
+    </div>
+    <div class="product-card" data-cat="office">
+      <div class="product-img">🖊️</div>
+      <div class="product-info">
+        <h3>Whiteboard Markers</h3>
+        <p>Multi-colour whiteboard markers and dry erasers for offices and schools.</p>
+        <span class="product-badge">Office</span>
+      </div>
+    </div>
+    <!-- Printing -->
+    <div class="product-card" data-cat="printing">
+      <div class="product-img">🖨️</div>
+      <div class="product-info">
+        <h3>Document Printing (B&W)</h3>
+        <p>Black & white document printing per page — fast turnaround.</p>
+        <span class="product-badge">Printing</span>
+      </div>
+    </div>
+    <div class="product-card" data-cat="printing">
+      <div class="product-img">🎨</div>
+      <div class="product-info">
+        <h3>Colour Printing</h3>
+        <p>Full-colour printing for posters, photos and presentations.</p>
+        <span class="product-badge">Printing</span>
+      </div>
+    </div>
+    <div class="product-card" data-cat="printing">
+      <div class="product-img">🪪</div>
+      <div class="product-info">
+        <h3>ID Card Printing</h3>
+        <p>Designed and printed ID cards for schools, organisations & businesses.</p>
+        <span class="product-badge">Printing</span>
+      </div>
+    </div>
+    <!-- Design -->
+    <div class="product-card" data-cat="design">
+      <div class="product-img">🖼️</div>
+      <div class="product-info">
+        <h3>Event Posters</h3>
+        <p>Custom designed and printed event, school, and church posters.</p>
+        <span class="product-badge">Design</span>
+      </div>
+    </div>
+    <div class="product-card" data-cat="design">
+      <div class="product-img">💼</div>
+      <div class="product-info">
+        <h3>Business Cards</h3>
+        <p>Professional business card design and printing in full colour.</p>
+        <span class="product-badge">Design</span>
+      </div>
+    </div>
+    <div class="product-card" data-cat="design">
+      <div class="product-img">🏆</div>
+      <div class="product-info">
+        <h3>Certificate Design</h3>
+        <p>Custom certificate templates for schools, churches and organisations.</p>
+        <span class="product-badge">Design</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;padding:0 0 64px;">
+    <p style="color:var(--gray);margin-bottom:20px;">Don't see what you need? We may still have it in stock!</p>
+    <a href="contact.html" class="btn btn-primary">Ask About a Product</a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="logo"><span class="logo-icon">✦</span><span class="logo-text">T&H <em>Digital & Stationery Hub</em></span></a><p>Your trusted one-stop shop in Namalu, Nakapiripirit District.</p></div>
+      <div class="footer-links"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="products.html">Products</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-links"><h4>Services</h4><ul><li><a href="services.html#school">School Supplies</a></li><li><a href="services.html#printing">Printing</a></li><li><a href="services.html#design">Graphic Design</a></li><li><a href="services.html#internet">Internet Services</a></li></ul></div>
+      <div class="footer-contact"><h4>Contact Us</h4><p>📍 Namalu T/C, Nakapiripirit District</p><p>📞 <a href="tel:0761264781">0761 264 781</a></p><p>✉️ <a href="mailto:loputherbert@gmail.com">loputherbert@gmail.com</a></p></div>
+    </div>
+    <div class="footer-bottom"><p>© <span id="year"></span> T&H Digital & Stationery Hub. All rights reserved.</p></div>
+  </div>
+</footer>
+
+<a href="https://wa.me/256761264781" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<style>
+.filter-btn {
+  padding: 8px 18px; border-radius: 50px; border: 1.5px solid var(--gray-light);
+  background: white; cursor: pointer; font-family: var(--font-head); font-weight: 600;
+  font-size: 0.875rem; color: var(--gray); transition: var(--transition);
+}
+.filter-btn:hover, .filter-btn.active {
+  background: var(--blue); color: white; border-color: var(--blue);
+}
+</style>
+
+<script src="main.js"></script>
+<script>
+  // Product filter
+  const btns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.product-card');
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const cat = btn.dataset.cat;
+      cards.forEach(card => {
+        card.style.display = (cat === 'all' || card.dataset.cat === cat) ? 'block' : 'none';
+      });
+    });
+  });
+</script>
+</body>
+</html>

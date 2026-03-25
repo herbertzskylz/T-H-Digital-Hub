@@ -1,10 +1,3 @@
-/* ============================================
-   AUBA'S STATIONERY – MAIN.JS
-   - Navbar scroll + mobile menu
-   - Business hours live detection
-   - Form validation + anti-spam + rate limiting
-   - Scroll animations
-   ============================================ */
 
 
    //automatic year load
@@ -78,8 +71,10 @@ const tsEl = document.getElementById('formTimestamp');
 if (csrfEl) csrfEl.value = generateToken();
 if (tsEl) tsEl.value = Date.now().toString();
 
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mqegkaqa';
+
 // ===== RATE LIMITING =====
-const RATE_KEY = 'auba_form_submissions';
+const RATE_KEY = 't&h_form_submissions';
 const RATE_LIMIT = 3;
 const RATE_WINDOW = 10 * 60 * 1000; // 10 minutes
 
@@ -181,7 +176,6 @@ if (serviceForm) {
       return;
     }
 
-    // Simulate submission (in production: POST to backend/Formspree/Netlify Forms)
     const btn = document.getElementById('submitBtn');
     const submitText = document.getElementById('submitText');
     const spinner = document.getElementById('submitSpinner');
@@ -190,15 +184,39 @@ if (serviceForm) {
     submitText.style.display = 'none';
     spinner.style.display = 'inline';
 
-    await new Promise(r => setTimeout(r, 1200)); // simulate network
+    try {
+      const payload = {
+        fullName: sanitize(document.getElementById('fullName').value),
+        phone: sanitize(document.getElementById('phone').value),
+        email: sanitize(document.getElementById('email').value),
+        service: sanitize(document.getElementById('service').value),
+        message: sanitize(document.getElementById('message').value),
+        howContact: sanitize(document.getElementById('howContact').value),
+        _replyto: sanitize(document.getElementById('email').value) || 'noreply@example.com',
+        _subject: `New Service Request: ${sanitize(document.getElementById('service').value)}`
+      };
 
-    btn.disabled = false;
-    submitText.style.display = 'inline';
-    spinner.style.display = 'none';
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
 
-    serviceForm.style.display = 'none';
-    successEl.classList.add('show');
-    successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      if (!res.ok) throw new Error('Server error');
+
+      serviceForm.reset();
+      serviceForm.style.display = 'none';
+      successEl.classList.add('show');
+      successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } catch (error) {
+      errEl.textContent = 'Could not send your request right now. Please try again in a few minutes.';
+      errEl.style.display = 'block';
+      console.error('Formspree error:', error);
+    } finally {
+      btn.disabled = false;
+      submitText.style.display = 'inline';
+      spinner.style.display = 'none';
+    }
   });
 }
 
@@ -229,10 +247,34 @@ if (enquiryForm) {
     const btn = document.getElementById('enquiryBtn');
     btn.disabled = true;
     btn.textContent = '⏳ Sending…';
-    await new Promise(r => setTimeout(r, 1000));
 
-    enquiryForm.style.display = 'none';
-    document.getElementById('enquirySuccess').classList.add('show');
+    try {
+      const payload = {
+        name: sanitize(document.getElementById('eName').value),
+        contact: sanitize(document.getElementById('eContact').value),
+        message: sanitize(document.getElementById('eMessage').value),
+        _replyto: sanitize(document.getElementById('eContact').value),
+        _subject: `General Enquiry from ${sanitize(document.getElementById('eName').value)}`
+      };
+
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+
+      if (!res.ok) throw new Error('Server error');
+
+      enquiryForm.reset();
+      enquiryForm.style.display = 'none';
+      document.getElementById('enquirySuccess').classList.add('show');
+    } catch (error) {
+      alert('Could not send your enquiry right now. Please try again in a few minutes.');
+      console.error('Formspree enquiry error:', error);
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Send Message';
+    }
   });
 }
 

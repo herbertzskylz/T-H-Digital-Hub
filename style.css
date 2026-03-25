@@ -566,4 +566,5 @@ em { font-style: normal; color: var(--orange); }
   .testimonials-grid { grid-template-columns: 1fr; }
   .products-grid { grid-template-columns: repeat(2, 1fr); }
   .images{display: grid; gap: 2rem; grid-template-columns: 1fr;}
+  .logo-text{font-size: 0.75rem;}
 }

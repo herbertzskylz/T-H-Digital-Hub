@@ -565,7 +565,7 @@ em { font-style: normal; color: var(--orange); }
   .logo-text{font-size: 0.75rem;}
 }
 
-/* Fix for tall screens like Sony Xperia 10 II (21:9 aspect ratio) */
+/* Fix for tall screens(21:9 aspect ratio) */
 @media (min-aspect-ratio: 2.2/1) {
   .hero {
     min-height: 80vh;
@@ -602,5 +602,60 @@ em { font-style: normal; color: var(--orange); }
   }
   .hcb-label {
     font-size: 0.65rem;
+  }
+}
+
+/* Fix for very narrow screens like 334px width */
+@media (max-width: 400px) {
+  .container {
+    padding: 0 16px;
+  }
+  .section {
+    padding: 40px 0;
+  }
+  .hero {
+    padding: 80px 16px 40px;
+  }
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 4rem);
+  }
+  .profile-wrapper {
+    width: 100%;
+    max-width: 330px;
+    height: auto;
+  }
+  .profile-wrapper img {
+    width: 100%;
+    height: auto;
+  }
+  .profile-wrapper p {
+    font-size: 1.2rem;
+  }
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  .logo-icon img {
+    width: 120px;
+    height: auto;
+  }
+  .nav-container {
+    padding: 0 16px;
+  }
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+  .hamburger {
+    padding: 12px;
+  }
+  .hamburger span {
+    width: 28px;
+    height: 3px;
   }
 }

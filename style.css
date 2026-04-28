@@ -1,8 +1,4 @@
-/* ============================================
-   AUBA'S STATIONERY – STYLESHEET
-   Fonts: Syne (headings) + DM Sans (body)
-   Colors: Deep Blue + Warm Orange + White
-   ============================================ */
+
 
 :root {
   --blue: #0a2463;
@@ -567,4 +563,44 @@ em { font-style: normal; color: var(--orange); }
   .products-grid { grid-template-columns: repeat(2, 1fr); }
   .images{display: grid; gap: 2rem; grid-template-columns: 1fr;}
   .logo-text{font-size: 0.75rem;}
+}
+
+/* Fix for tall screens like Sony Xperia 10 II (21:9 aspect ratio) */
+@media (min-aspect-ratio: 2.2/1) {
+  .hero {
+    min-height: 80vh;
+    max-height: 1000px;
+  }
+  .s1 {
+    top: -200px;
+    right: -400px;
+    width: 500px;
+    height: 500px;
+  }
+  .s2 {
+    bottom: -300px;
+    left: -300px;
+    width: 300px;
+    height: 300px;
+  }
+  .s3 {
+    top: 20%;
+    left: 20%;
+    width: 200px;
+    height: 200px;
+  }
+  .hero-card-stack {
+    width: 300px;
+    height: 300px;
+  }
+  .hero-center-badge {
+    width: 80px;
+    height: 80px;
+  }
+  .hcb-num {
+    font-size: 1.5rem;
+  }
+  .hcb-label {
+    font-size: 0.65rem;
+  }
 }
